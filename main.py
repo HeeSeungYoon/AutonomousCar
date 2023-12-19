@@ -102,12 +102,12 @@ if __name__ == '__main__':
                     print('s {:.1f}, {:.1f}, {:.1f}'.format(front, right, left))
                     car_backward(r_motor, l_motor)
 
-                if left < obstacle+term or (camera_direct=='left' and direct_ratio > 0.6):                    
+                if left < obstacle+term and (camera_direct=='left' and direct_ratio > 0.6):                    
                     while DISTANCE['front']<obstacle+term and DISTANCE['right']-DISTANCE['left'] < obstacle-term:
                         print('s {:.1f}, {:.1f}, {:.1f}'.format(front, right, left))
                         car_Turn_CW(r_motor, l_motor)
                     
-                elif right < obstacle+term or (camera_direct=='right' and direct_ratio > 0.6):
+                elif right < obstacle+term and (camera_direct=='right' and direct_ratio > 0.6):
                     while  DISTANCE['front']<obstacle+term and DISTANCE['left']-DISTANCE['right']<obstacle-term:
                         print('s {:.1f}, {:.1f}, {:.1f}'.format(front, right, left))
                         car_Turn_CCW(r_motor, l_motor)
