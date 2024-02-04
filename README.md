@@ -71,7 +71,7 @@
         L_motor.forward(speed+10)
     ```
 
-- 코드: [Moter](./motor.py)
+- 코드: [Motor](./motor.py)
 
 ### 4.4. 초음파 센서
 
